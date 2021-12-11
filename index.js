@@ -4,7 +4,7 @@ const client = new Discord.Client({
     intents: ["GUILDS", "GUILD_MEMBERS", "GUILD_BANS", "GUILD_INTEGRATIONS", "GUILD_INVITES", "GUILD_PRESENCES", "GUILD_MESSAGES", "GUILD_MESSAGE_REACTIONS", "GUILD_MESSAGE_TYPING", "DIRECT_MESSAGES"],
 });
 
-client.login("OTE5MDAxODU2MjYzNDg3NDg4.YbPdLA.lF4kQ1QgLNVyzoR2ZwROLhUOVxM");
+client.login(process.env.token);
 
 client.commands = new Discord.Collection();
 
