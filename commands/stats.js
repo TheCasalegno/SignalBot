@@ -6,6 +6,10 @@ module.exports = {
 
         var user = message.member.nickname
 
+        if(!user) {
+            user = message.author.username
+        } 
+        
         if(user.includes(" ")) {
             message.channel.send(":x: **Errore!** Il tuo username contiene il seguente carattere non ammesso: **' '** *(spazio)* :x:")
             return
