@@ -1,0 +1,22 @@
+{
+  "name": "signalbot",
+  "version": "1.0.0",
+  "description": "👋  **Ciao!** Sono il bot di **Signal The Frog**, utilizzato nel server Discord di *Geocaching® Italia*.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheCasalegnoGeo/SignalBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheCasalegnoGeo/SignalBot/issues"
+  },
+  "homepage": "https://github.com/TheCasalegnoGeo/SignalBot#readme",
+  "dependencies": {
+    "discord.js": "^13.3.1"
+  }
+}
