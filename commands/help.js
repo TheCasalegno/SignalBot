@@ -13,7 +13,7 @@ module.exports = {
             .addField(":compass: USERSTATS :compass:", "Usa questo comando per vedere le tue statistiche tramite **Project-GC** \n *Per un utilizzo ottimale, ti consiglio di modificare il tuo nickname nel server, come quello di Geocaching!* \n **|** `[!stats]` **|** `[!userstats]` **|** `[!statistiche]` **|**", false )
             .addField(":compass: BADGEBAR :compass:", "Usa questo comando per vedere i tuoi badge di **Project-GC** \n *Per un utilizzo ottimale, ti consiglio di modificare il tuo nickname nel server, come quello di Geocaching!* \n **|** `[!badgebar]` **|** `[!badge]` **|** `[!badgen]` **|**", false )
             .addField(":compass: PROFILE :compass:", "Usa questo comando per ottenere il link del tuo profilo **Geocaching** \n *Per un utilizzo ottimale, ti consiglio di modificare il tuo nickname nel server, come quello di Geocaching!* \n **|** `[!profile]` **|** `[!profilo]` **|** `[!p]` **|**", false )
-
+            .setFooter("Bot creato da TheCasalegno#4196", "https://iili.io/7wpIWX.png")
         message.channel.send({ embeds: [embed] })
     }
 }
