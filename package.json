@@ -18,5 +18,8 @@
   "homepage": "https://github.com/TheCasalegnoGeo/SignalBot#readme",
   "dependencies": {
     "discord.js": "^13.3.1"
+  },
+  "engines" : {
+    "node": "1.16.x"
   }
 }
