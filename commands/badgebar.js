@@ -9,15 +9,13 @@ module.exports = {
         if(!user) {
             user = message.author.username
         } 
-        
         if(user.includes(" ")) {
-            message.channel.send(":x: **Errore!** Il tuo username contiene il seguente carattere non ammesso: **' '** *(spazio)* :x:")
-            return
+            user = user.replace(" ", "%20")
         }
 
         var link = "https://cdn2.project-gc.com/BadgeBar/" + user + ".png"
 
-        message.channel.send("Ecco a te la tua BadgeBar del tuo profilo:")
+        message.channel.send("Here is the BadgeBar of your profile:")
         message.channel.send(link)
 
     }

@@ -15,7 +15,7 @@ for (const file of commandsFiles) {
 }
 
 client.on("messageCreate", message => {
-    var prefix = "!"
+    var prefix = "s!"
 
     if (!message.content.startsWith(prefix) || message.author.bot) return
 
@@ -26,16 +26,5 @@ client.on("messageCreate", message => {
 
     var comando = client.commands.get(command) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(command))
 
-    if (comando.onlyStaff) {
-        if (!message.member.hasPermission("ADMINISTRATOR")) {
-            var embed = new Discord.MessageEmbed()
-                .setColor("#ff0000")
-                .setTitle("Non Permesso!")
-                .setDescription("**Non hai il permesso per eseguire questo comando!**")
-                
-            message.channel.send({ embeds: [embed] })
-            return
-        }
-    }
     comando.execute(message, args, );
 })

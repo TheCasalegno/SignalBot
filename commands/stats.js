@@ -1,7 +1,7 @@
 module.exports = {
     name: "stats",
-    description: "Statistiche dell'utente via Project-GC",
-    aliases: ["userstats", "statistiche"],
+    description: "Stats of the user via Project-GC",
+    aliases: ["userstats", "statistics"],
     execute(message, args) {
 
         var user = message.member.nickname
@@ -9,15 +9,13 @@ module.exports = {
         if(!user) {
             user = message.author.username
         } 
-        
         if(user.includes(" ")) {
-            message.channel.send(":x: **Errore!** Il tuo username contiene il seguente carattere non ammesso: **' '** *(spazio)* :x:")
-            return
+            user = user.replace(" ", "%20")
         }
 
-        var link = "https://cdn2.project-gc.com/statbar.php?includeLabcaches&quote=Geocaching%20Italia&user=" + user
+        var link = "https://cdn2.project-gc.com/StatBar/" + user + ".png?includeLabcaches&quote=Signal%20The%20Bot"
 
-        message.channel.send("Ecco a te le statistiche del tuo profilo:")
+        message.channel.send("Here are the statistics of your profile:")
         message.channel.send(link)
 
     }
